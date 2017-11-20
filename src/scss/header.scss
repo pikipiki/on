@@ -1,9 +1,33 @@
-header {
-  .acccount {
-    ul {
-      li:not(:first-child) {
-        text-transform: uppercase;
+$nav-width: 1000px;
+$breakpoint: 800px;
+$nav-background: #feebe2;
+$nav-height: 70px;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
 
+header {
+  .account {
+    float: right;
+    ul {
+      display: block;
+      line-height: $nav-height;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+        &:not(:first-child) {
+          text-transform: uppercase;
+        }
+        background-color: $nav-background;
+        float: left;
+        a {
+          text-decoration: none;
+          color: $nav-font-color;
+          padding: 0 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }
