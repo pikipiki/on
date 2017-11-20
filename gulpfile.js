@@ -69,6 +69,7 @@ gulp.task('modules', () => {
 })
 
 gulp.task('default', [
+  'sass',
   'copyHtml',
   'minJs',
   'copyLibCss',

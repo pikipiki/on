@@ -1,0 +1,10 @@
+header {
+  .acccount {
+    ul {
+      li:not(:first-child) {
+        text-transform: uppercase;
+
+      }
+    }
+  }
+}
