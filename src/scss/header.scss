@@ -37,6 +37,18 @@ header {
             position: relative;
             float: left;
 
+            &.link-dropdown {
+
+              &:hover {
+                
+                .nav-dropdown {
+                  display: block;
+                }
+                
+              }
+
+            }
+
             &:not(:first-child) {
               text-transform: uppercase;
             }
@@ -153,9 +165,6 @@ header {
                 width: 100%;
                 background: white;
               }
-            &.active {
-              display: block;
-            }
 
             }
 
