@@ -1,3 +1,9 @@
+@import 'variables';
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.yellow {
+  color: $yellow;
 }

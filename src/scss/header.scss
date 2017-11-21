@@ -1,9 +1,4 @@
-$nav-width: 1210px;
-$breakpoint: 768px;
-$nav-background: #feebe2;
-$nav-height: 35px;
-$nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+@import 'variables';
 
 header {
   .nav-toggle {
@@ -13,7 +8,7 @@ header {
       // width: $nav-width;
       width: 100%;
       min-width: 700px;
-      height: $nav-height+1px;
+      height: $nav-height + 1px;
       background-color: $nav-background;
       .account {
         float: right;
@@ -56,6 +51,28 @@ header {
               padding: 0 10px;
               &:hover {
                 cursor: pointer;
+              }
+            }
+            .login {
+              position: absolute;
+              width: 250px;
+              height: 250px;
+              border: 1px solid black;
+              margin-left: -123px;
+              text-align: center;
+              input {
+                line-height: 2.15;
+                border-radius: 25px;
+                border: 1px grey solid;
+              }
+              input:nth-child(1) {
+                margin-bottom: 5px;
+              }
+              button {
+                text-transform: uppercase;
+              }
+              a {
+                // color: $yellow;
               }
             }
           }
