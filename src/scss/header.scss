@@ -14,7 +14,7 @@
 header {
 
   .nav-toggle {
-    
+
     .account-container {
       padding-right: 30px;
       border-top: #7d7d7d solid 1px;
@@ -142,28 +142,17 @@ header {
 
             }
 
-          }
+            .nav-dropdown {
+              position: absolute;
+              box-shadow: $boxshadow-value; 
 
-          .languages {
-            position: absolute;
-            width: 144px;
-            box-shadow: $boxshadow-value; 
-
-            span {
-              display: block;
-              padding-left: 0.6rem;
-            }
-
-          }
-
-          .currency {
-            position: absolute;
-            width: 101px;
-            box-shadow: $boxshadow-value; 
-
-            span {
-              display: block;
-              padding-left: 0.6rem;
+              li {
+                padding-left: 9px;
+                display: block;
+                width: 100%;
+                background: white;
+              }
+              
             }
 
           }
