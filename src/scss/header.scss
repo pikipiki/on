@@ -1,63 +1,72 @@
 $nav-width: 1210px;
-$breakpoint: 800px;
+$breakpoint: 768px;
 $nav-background: #feebe2;
 $nav-height: 35px;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
 
 header {
-  .account-container {
-    padding-right: 30px;
-    width: $nav-width;
-    border-top: #7d7d7d solid 1px;
-    width: $nav-width;
-    height: $nav-height;
-    background-color: $nav-background;
-    .account {
-      float: right;
-      ul {
-        display: block;
-        line-height: $nav-height;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        li{
-          &:not(:first-child) {
-            text-transform: uppercase;
-          }
-          &:nth-child(1) {
-            background-color: $nav-background;
-          }
-          &:nth-child(2) {
-            background-color: #fecbb4;
-          }
-          &:nth-child(3) {
-            background-color: #95d5d6;
-          }
-          &:nth-child(4) {
-            background-color: white;
-            a {
-              color: #7d7d7d;
+  .nav-toggle {
+    .account-container {
+      padding-right: 30px;
+      border-top: #7d7d7d solid 1px;
+      // width: $nav-width;
+      width: 100%;
+      min-width: 700px;
+      height: $nav-height+1px;
+      background-color: $nav-background;
+      .account {
+        float: right;
+        ul {
+          display: block;
+          line-height: $nav-height;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li{
+            &:not(:first-child) {
+              text-transform: uppercase;
             }
-          }
-          &:nth-child(5) {
-            border-left: #7d7d7d solid 1px;
-            background-color: white;
-            a {
-              color: #7d7d7d;
+            &:nth-child(1) {
+              background-color: $nav-background;
             }
-          }
-          float: left;
-          a {
-            text-decoration: none;
-            color: $nav-font-color;
-            padding: 0 10px;
-            &:hover {
-              cursor: pointer;
+            &:nth-child(2) {
+              background-color: #fecbb4;
+            }
+            &:nth-child(3) {
+              background-color: #95d5d6;
+            }
+            &:nth-child(4) {
+              background-color: white;
+              a {
+                color: #7d7d7d;
+              }
+            }
+            &:nth-child(5) {
+              border-left: #7d7d7d solid 1px;
+              background-color: white;
+              a {
+                color: #7d7d7d;
+              }
+            }
+            float: left;
+            a {
+              text-decoration: none;
+              color: $nav-font-color;
+              padding: 0 10px;
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  .account {
+    display: none;
   }
 }
