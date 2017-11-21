@@ -14,6 +14,10 @@ const paths       = {
   js: `${root}/js/*.js`,
   modules: [
     'jquery/dist/jquery.min.js'
+  ],
+  static: [
+    `${root}/img/**/*`,
+    `${root}/fonts/**/*`
   ]
 
 }
@@ -55,6 +59,11 @@ gulp.task('copyHtml', () => {
     .pipe(gulp.dest(paths.dist));
 })
 
+gulp.task('copyStatic', () => {
+  gulp.src(paths.static, { base: 'src' })
+    .pipe(gulp.dest(paths.dist));
+})
+
 gulp.task('copyLibCss', () => {
   gulp.src(paths.libCss)
     .pipe(gulp.dest(`${paths.dist}/css`));
@@ -70,8 +79,9 @@ gulp.task('modules', () => {
 
 gulp.task('default', [
   'sass',
-  'copyHtml',
   'minJs',
+  'copyHtml',
+  'copyStatic',
   'copyLibCss',
   'modules',
   'serve',
