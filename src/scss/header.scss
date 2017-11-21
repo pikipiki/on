@@ -143,6 +143,7 @@ header {
             }
 
             .nav-dropdown {
+              display: none;
               position: absolute;
               box-shadow: $boxshadow-value; 
 
@@ -152,7 +153,10 @@ header {
                 width: 100%;
                 background: white;
               }
-              
+            &.active {
+              display: block;
+            }
+
             }
 
           }

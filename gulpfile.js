@@ -49,8 +49,8 @@ gulp.task('serve', ['sass', 'minJs'], () => {
 
 gulp.task('watch', () => {
   gulp.watch(paths.scss, ['sass']);
-  gulp.watch(paths.js, ['minJs']);
   gulp.watch(paths.html, ['copyHtml']);
+  gulp.watch(paths.js, browserSync.reload);
   gulp.watch(paths.html).on('change', browserSync.reload)
 })
 
