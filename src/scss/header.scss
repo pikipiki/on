@@ -1,96 +1,183 @@
 @import 'variables';
 
-@mixin red-border(){
+@mixin red-border() {
   border: 1px solid red;
 }
 
+@mixin btn-oncovia($imgUrl, $color) {
+  background: url($imgUrl);
+  padding: 5px;
+  line-height: 3rem;
+  color: $color
+}
+
 header {
+
   .nav-toggle {
+    
     .account-container {
       padding-right: 30px;
       border-top: #7d7d7d solid 1px;
-      // width: $nav-width;
       width: 100%;
       min-width: 700px;
       height: $nav-height + 1px;
       background-color: $nav-background;
+
       .account {
         float: right;
+
         ul {
           display: block;
           line-height: $nav-height;
           padding: 0;
           margin: 0;
           list-style: none;
+
           li{
+            position: relative;
+            float: left;
+
             &:not(:first-child) {
               text-transform: uppercase;
             }
+
             &:nth-child(1) {
               background-color: $nav-background;
             }
+
             &:nth-child(2) {
               background-color: #fecbb4;
             }
+
             &:nth-child(3) {
               background-color: #95d5d6;
             }
+
             &:nth-child(4) {
               background-color: white;
+
               a {
                 color: #7d7d7d;
+
+                &:after {
+                  content: ' ▾';
+                  padding-right: 0.5rem;
+                }
+
               }
             }
+
             &:nth-child(5) {
               border-left: #7d7d7d solid 1px;
               background-color: white;
+
               a {
                 color: #7d7d7d;
+
+                &:after {
+                  content: ' ▾';
+                  padding-right: 0.5rem;
+                }
+
               }
+
             }
-            float: left;
+
             a {
               text-decoration: none;
               color: $nav-font-color;
               padding: 0 10px;
+
               &:hover {
                 cursor: pointer;
               }
+
             }
+
             .login {
               position: absolute;
               width: 300px;
-              height: 300px;
-              border: 1px solid black;
-              margin-left: -123px;
+              box-shadow: $boxshadow-value;
+              margin-left: -173px;
               text-align: center;
+
               input {
                 line-height: 2.15;
                 border-radius: 25px;
                 border: 1px grey solid;
+                width: 12rem;
+
                 &::placeholder {
                   padding-left: 25px;
                 }
+
               }
+
               input:nth-child(1) {
                 margin-bottom: 5px;
               }
+
+              input:nth-child(2) {
+                margin-bottom: 1rem;
+              }
+
               button {
                 text-transform: uppercase;
                 @include red-border();
-                background: url('../img/btn-yellow.jpg');
+                @include btn-oncovia('../img/btn-yellow.jpg', white);
               }
+
+              hr {
+                margin: 1rem;
+              }
+
+              button:last-child {
+                margin-bottom: 1.5rem;
+              }
+
               a {
                 color: $yellow;
                 text-decoration: underline;
               }
+
             }
+
           }
+
+          .languages {
+            position: absolute;
+            width: 144px;
+            box-shadow: $boxshadow-value; 
+
+            span {
+              display: block;
+              padding-left: 0.6rem;
+            }
+
+          }
+
+          .currency {
+            position: absolute;
+            width: 101px;
+            box-shadow: $boxshadow-value; 
+
+            span {
+              display: block;
+              padding-left: 0.6rem;
+            }
+
+          }
+
         }
+
       }
+
     }
+
   }
+
 }
+
 
 @media screen and (max-width: $breakpoint) {
   .account {
