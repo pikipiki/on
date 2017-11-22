@@ -202,24 +202,25 @@ header {
 
       }
 
-      .row:nth-of-type(2) {
+      .search {
+        padding-left: 4rem;
 
-        .search {
-          padding-left: 10.5rem;
+        input {
+          min-width: 320px;
+          height: 48px;
+          border: 1px $font-beige solid;
+          border-radius: 2.5rem;
 
+          &::placeholder {
+            padding-left: 2rem;
+          }
+
+          &:focus {
+            outline: none;
+          }
         }
 
       }
-
-      .row:nth-of-type(3) {
-
-        .cart {
-
-          background: blue;
-        }
-
-      }
-
 
     }
 
