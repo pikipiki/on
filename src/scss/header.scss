@@ -5,10 +5,10 @@
 }
 
 @mixin btn-oncovia($imgUrl, $color) {
-  background: url($imgUrl);
+  background: url($imgUrl) center transparent;
   padding: 5px;
   line-height: 3rem;
-  color: $color
+  color: $color;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
                 .nav-dropdown {
                   display: block;
                 }
-                
+
               }
 
             }
