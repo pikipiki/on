@@ -1,8 +1,7 @@
 header {
-  
-  background: url('https://www.oncovia.com/themes/theme_nq/css/../img/backgrounds/or-pink-header.jpg') top center repeat;
 
   .nav-toggle {
+    background: url('https://www.oncovia.com/themes/theme_nq/css/../img/backgrounds/or-pink-header.jpg') top center repeat;
 
     .account-container {
       margin: 0 auto;
@@ -160,6 +159,21 @@ header {
 
         }
 
+      }
+
+    }
+
+  }
+
+  .nav-container {
+
+    .search {
+
+      // border-bottom: 1px solid $font-beige;
+      border: 1px solid $font-beige;
+
+      span {
+        float:left;
       }
 
     }

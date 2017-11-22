@@ -8,7 +8,7 @@ const root        = "./src/"
 const paths       = {
   dist: "./dist/",
   css: `${root}/css`,
-  scss: `${root}/scss/*.scss`,
+  scss: `${root}/scss/**/*.scss`,
   html: `${root}/index.html `,
   libCss: './node_modules/normalize.css/normalize.css',
   js: `${root}/js/*.js`,

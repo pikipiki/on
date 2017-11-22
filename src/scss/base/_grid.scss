@@ -13,9 +13,11 @@
 
 .one,
 .one-third,
-.two-thirds,
 .one-fourth,
+.one-fifth,
+.two-thirds,
 .three-fourth,
+.four-fifth,
 .half {
   width: 100%;
 }
@@ -42,11 +44,10 @@
   .three-fourth {
     width: calc(100% / 4*3);
   }
+  .four-fifth{
+    width: calc(100%/ 5*4);
+  }
   .column {
     float: left;
   }
-}
-
-.column {
-  border: 2px solid black;
 }
