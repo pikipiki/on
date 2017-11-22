@@ -1,16 +1,3 @@
-@import 'variables';
-
-@mixin red-border() {
-  border: 1px solid red;
-}
-
-@mixin btn-oncovia($imgUrl, $color) {
-  background: url($imgUrl) center transparent;
-  padding: 5px;
-  line-height: 3rem;
-  color: $color;
-}
-
 header {
   
   background: url('https://www.oncovia.com/themes/theme_nq/css/../img/backgrounds/or-pink-header.jpg') top center repeat;

@@ -1,7 +1,8 @@
 @import 'fontawesome/font-awesome';
-@import 'reset';
-@import 'grid';
+@import 'base/reset';
 @import 'variables';
+@import 'utils/mixins';
+@import 'utils/helpers';
+@import 'base/grid';
 @import 'global';
-@import 'helpers';
-@import 'header';
+@import 'components/header';

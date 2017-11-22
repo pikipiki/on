@@ -15,11 +15,12 @@
 .one-third,
 .two-thirds,
 .one-fourth,
+.three-fourth,
 .half {
   width: 100%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $breakpoint) {
   .one {
     width: 100%;
   }
@@ -32,8 +33,14 @@
   .one-fourth {
     width: calc(100% / 4);
   }
+  .one-fifth {
+    width: calc(100% / 5);
+  }
   .two-thirds {
-    width: calc(100% / 3 *2)
+    width: calc(100% / 3*2);
+  }
+  .three-fourth {
+    width: calc(100% / 4*3);
   }
   .column {
     float: left;
