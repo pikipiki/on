@@ -12,16 +12,17 @@
 }
 
 header {
+  
+  background: url('https://www.oncovia.com/themes/theme_nq/css/../img/backgrounds/or-pink-header.jpg') top center repeat;
 
   .nav-toggle {
 
     .account-container {
-      padding-right: 30px;
+      margin: 0 auto;
       border-top: #7d7d7d solid 1px;
       width: 100%;
-      min-width: 700px;
+      max-width: $nav-width;
       height: $nav-height + 1px;
-      background-color: $nav-background;
 
       .account {
         float: right;
