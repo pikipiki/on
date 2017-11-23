@@ -38,8 +38,9 @@ gulp.task('minJs', () => {
     .pipe(gulp.dest(`${paths.dist}/js`))
 })
 
-gulp.task('serve', ['sass', 'minJs'], () => {
+gulp.task('serve', ['sass', 'minJs', 'copyHtml'], () => {
   browserSync.init({
+    files: [`${paths.dist}/**`],
     injectChanges: true,
     server: {
       baseDir: paths.dist
@@ -49,9 +50,11 @@ gulp.task('serve', ['sass', 'minJs'], () => {
 
 gulp.task('watch', () => {
   gulp.watch(paths.scss, ['sass']);
+  gulp.watch(paths.js, ['minJs']);
   gulp.watch(paths.html, ['copyHtml']);
-  gulp.watch(paths.js, browserSync.reload);
-  gulp.watch(paths.html).on('change', browserSync.reload)
+  // gulp.watch(paths.js).on('change', browserSync.reload);
+  // gulp.watch(paths.scss).on('change', browserSync.reload);
+  // gulp.watch(paths.html).on('change', browserSync.reload);
 })
 
 gulp.task('copyHtml', () => {

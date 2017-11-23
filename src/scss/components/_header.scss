@@ -182,15 +182,37 @@ header {
       border-bottom: 1px solid $font-beige;
       margin-left: 13rem;
 
+      .logo {
+        position: absolute;
+        background: url('../img/sprite.png') top left no-repeat;
+        width: 206px;
+        height: 202px;
+        top: 0;
+        left: 3rem;
+      }
+
       .row:nth-of-type(1) {
+        padding-top: 1.8rem;
 
         .support {
+          position: relative;
+          padding-left: 6rem;
+          text-align: center;
+
+          i {
+            font-size: 5rem;
+            position: absolute;
+            top:0;
+            left:10rem;
+          }
 
           span {
+            font-size: $font-size-nav;
 
             &:nth-of-type(1) {
               display: inline-block;
               border-bottom: 1px solid black;
+              text-transform: uppercase;
             }
 
             &:nth-of-type(2) {
@@ -204,7 +226,7 @@ header {
       }
 
       .search {
-        padding-left: 4rem;
+        padding-left: 3rem;
 
         input {
           min-width: 320px;
@@ -222,6 +244,15 @@ header {
           }
         }
 
+      }
+
+      .cart {
+        text-align: right;
+
+        span {
+          font-size: $font-size-nav;
+          text-transform: uppercase;
+        }
       }
 
     }
