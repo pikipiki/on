@@ -24,12 +24,21 @@ header {
             position: relative;
             float: left;
 
+            a {
+              font-size: 2rem;
+              font-family: 'yokomizo';
+            }
+
             &.link-dropdown {
 
               &:hover {
                 
                 .nav-dropdown {
                   display: block;
+
+                  input {
+                    display: block;
+                  }
                 }
 
               }
@@ -44,6 +53,7 @@ header {
               background-color: $nav-background;
               a {
                 color: $font-beige;
+                font-size: 1.4rem;
               }
             }
 
@@ -100,47 +110,51 @@ header {
               position: absolute;
               width: 300px;
               box-shadow: $boxshadow-value;
-              margin-left: -173px;
+              margin-left: -213px;
               text-align: center;
               background: white;
 
-              input {
-                line-height: 2.15;
-                border-radius: 25px;
-                border: 1px grey solid;
-                width: 12rem;
+              .container {
 
-                &::placeholder {
-                  padding-left: 25px;
+                input {
+                  line-height: 2.15;
+                  border-radius: 25px;
+                  border: 1px grey solid;
+                  width: 12rem;
+
+                  &::placeholder {
+                    padding-left: 25px;
+                  }
+
                 }
 
-              }
+                input:nth-of-type(1) {
+                  margin-bottom: 5px;
+                }
 
-              input:nth-of-type(1) {
-                margin-bottom: 5px;
-              }
+                input:nth-of-type(2) {
+                  margin-bottom: 1rem;
+                }
 
-              input:nth-of-type(2) {
-                margin-bottom: 1rem;
-              }
+                button {
+                  text-transform: uppercase;
+                  @include red-border();
+                  @include btn-oncovia('../img/btn-yellow.jpg', white);
+                }
 
-              button {
-                text-transform: uppercase;
-                @include red-border();
-                @include btn-oncovia('../img/btn-yellow.jpg', white);
-              }
+                hr {
+                  margin: 1rem;
+                }
 
-              hr {
-                margin: 1rem;
-              }
+                button:last-child {
+                  margin-bottom: 1.5rem;
+                }
 
-              button:last-child {
-                margin-bottom: 1.5rem;
-              }
-
-              a {
-                color: $yellow;
-                text-decoration: underline;
+                a {
+                  color: $yellow;
+                  text-decoration: underline;
+                }
+                
               }
 
             }
@@ -193,16 +207,18 @@ header {
 
       .row:nth-of-type(1) {
         padding-top: 1.8rem;
+        display: relative;
 
         .support {
           position: relative;
           padding-left: 6rem;
           text-align: center;
+          margin-top: 0.6rem;
 
           i {
             font-size: 5rem;
             position: absolute;
-            top:0;
+            top:-0.7rem;
             left:10rem;
           }
 
@@ -233,10 +249,13 @@ header {
           height: 48px;
           border: 1px $font-beige solid;
           border-radius: 2.5rem;
-          background: $font-beige;
+          background: $light-beige;
+          font-size: $font-size-nav;
+          font-style: italic;
 
           &::placeholder {
             padding-left: 2rem;
+            color: $font-beige;
           }
 
           &:focus {
@@ -248,11 +267,27 @@ header {
 
       .cart {
         text-align: right;
+        margin-top: 1.5rem;
+        position: relative;
 
-        span {
-          font-size: $font-size-nav;
-          text-transform: uppercase;
+        .cart-container {
+
+          span {
+            font-size: $font-size-nav;
+            text-transform: uppercase;
+            margin-right: 5rem;
+          }
+
+          i {
+            font-size: 5rem;
+            position: absolute;
+            top:-1.8rem;
+            right:0;
+          }
+          
         }
+
+
       }
 
     }
